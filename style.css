@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --color-Principal:#ffff;
+    --color-Secundario: #d9dce2;
+    --color-Tercero: grey;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+::selection{
+    background: var(--color-Tercero);
+    color: var(--color-Secundario);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.left, .right{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+}
+.left{
+    background: var(--color-Principal);
+}
+.right{
+    left: 50%;
+    background: var(--color-Secundario);
+}
+.nav{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+}
+.logo, .next{
+    line-height: 80px;
+    position: absolute;
+    padding: 10px;
+}
+.watch, .cart{
+    line-height: 80px;
+    position: absolute;
+    padding: 10px;
+    right: 0;
+}
+.logo{
+    padding: 10px 80px 10px 60px;
+    background: var(--color-Secundario);
+}
+.next{
+    left: 280px;
+}
+.watch{
+    right: 220px;
+    font-weight: lighter;
+    color: var(--color-Tercero);
+}
+.watch a{
+    text-decoration: none;
+    color: var(--color-Tercero);
+}
+.cart{
+    right: 70px;
+}
+.right-sidebar{
+    right: 80px;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    text-align: right;
+}
+.right-sidebar ul{
+    list-style: none;
+}
+.title{
+    font-size: 36px;
+    font-weight: bolder;
+    padding-bottom: 40px;
+}
+.right-sidebar li:not(:first-child){
+    padding: 6px 0;
+}
+.right-sidebar ul li a{
+    text-decoration: none;
+    color: var(--color-Tercero);
+}
+.product{
+    position: absolute;
+    top: 55%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+}
+.product img{
+    display: inline-block;
+    margin: 0 auto;
+}
+.product img:first-child{
+    
+    animation: fly 5s ease-in-out infinite;
+}
+.product img:last-child{
+    
+    animation: fly 4s ease-in-out infinite;
+}
+@keyframes fly {
+    0%{
+        transform: translate(0%, -4%);
+    }
+    50%{
+        transform: translate(0%, -8%);
+    }
+    100%{
+        transform: translate(0%, -4%);
+    }
+}
+.left-bottom a{
+    text-decoration: none;
+    position: absolute;
+    left: 60px;
+    bottom: 40px;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    color: var(--color-Tercero);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.left-sidebar{
+    left: 60px;
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    text-align: left;
+    width: 28%;
+}
+.left-sidebar a{
+    text-decoration: none;
+    padding: 15px 45px;
+    background: var(--color-Tercero);
+    color: var(--color-Principal);
+    outline: none;
+    border: none;
+    margin: 1em 0;
+    font-weight: 700;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+.left-sidebar p{
+    font-weight: lighter;
+    line-height: 24px;
+    color: var(--color-Tercero);
+}
+.price{
+    font-weight: bolder !important;
+}
+.media{
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+}
+.media ul{
+    list-style: none;
+}
+.media ul li{
+    display: inline-block;
+}
+.media ul li a{
+    text-decoration: none;
+    color: #000;
+}
+.media ul li:not(:last-child){
+    padding-right: 40px;
+}
+
+@media (max-width: 600px) {
+    .facet_sidebar {
+      display: none;
+    }
+  }
